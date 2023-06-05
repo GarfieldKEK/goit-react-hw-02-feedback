@@ -1,4 +1,4 @@
-import { FeedbackComponent } from "feedbacks/feedback";
+import { FeedbackComponent } from "./feedback";
 export const App = () => {
   return (
   <FeedbackComponent/>

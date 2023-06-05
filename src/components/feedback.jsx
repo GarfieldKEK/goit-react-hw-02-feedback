@@ -3,7 +3,11 @@ import { FeedbackOptions } from "./FeedbackOptions";
 import { Statistics } from "./Statisctics";
 import { Section } from "./Section";
 import {Notification} from "./Notification";
+import PropTypes from "prop-types";
 export class FeedbackComponent extends Component {
+    static propTypes = {
+      options: PropTypes.arrayOf(PropTypes.string.isRequired),
+    };
     state = {
         good: 0,
         neutral: 0,
