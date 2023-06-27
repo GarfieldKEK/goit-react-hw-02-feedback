@@ -5,7 +5,7 @@ import { Section } from "./Section";
 import { Notification } from "./Notification";
 import PropTypes from "prop-types";
 
-export const FeedbackComponent = ({ options }) => {
+export const FeedbackComponent = () => {
   const [feedback, setFeedback] = useState({
     good: 0,
     neutral: 0,
@@ -34,7 +34,7 @@ export const FeedbackComponent = ({ options }) => {
     <div>
       <Section title="Please Leave a Feedback">
         <FeedbackOptions
-          options={options}
+          options={Object.keys(feedback)}
           onLeaveFeedback={handleFeedback}
         />
       </Section>
@@ -56,8 +56,9 @@ export const FeedbackComponent = ({ options }) => {
   );
 };
 
+
+
+
 FeedbackComponent.propTypes = {
   options: PropTypes.arrayOf(PropTypes.string.isRequired),
 };
-
-
